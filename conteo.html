@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>conteo</title>
+	<script >
+		var x =10;
+	</script>
+</head>
+<body background="fcon.jpeg" style="background-repeat: no-repeat;background-size: cover;" onload="hola()">
+	<div class="cuadro" id="cua">BIENVENIDO
+</div>
+<button class="in" onclick="location.href='index.html'"></button>
+
+
+<style> 
+
+	.body
+	{
+		background-image: url("fcon.jpeg");
+	}
+  .cuadro
+{
+	background-image: url("cajacon.jpeg");
+	font-size: 70px;
+    text-align: center;
+    font-style: oblique;
+    line-height:300px;
+	height:295px;
+	width: 500px;
+	margin-top:140px;
+	margin-left: 420px;
+
+}
+.in{
+	background-image: url("inicio.jpeg");
+			width: 140px;
+			margin-top: 100px;
+			margin-left: 600px;
+			height: 60px;
+}
+.mostrar
+{
+
+	height: 20px;
+	width: 40px;
+	margin-top: 40px;
+}
+</style>
+	<script >
+
+		function primero()
+		{
+	chocolate=setInterval(saludo,1000);
+	 var mostrar=document.getElementById('cua');
+       	mostrar.innerHTML="hola";
+	   }
+
+
+	function saludo(){
+		//var mostrar=document.getElementById('mostrar')
+		console.log(x);
+		 var mostrar=document.getElementById('cua');
+       	mostrar.innerHTML=x;
+		x=x-1;
+		if(x==0)
+
+		{
+
+			clearInterval(chocolate);
+			document.getElementById('cua').innerHTML="termine";
+
+
+
+			 
+		}
+	}
+	function hola()
+	{
+		console.log("hola");
+	    setTimeout(primero,5000);
+
+
+
+	}
+
+
+	</script>
+	
+</body>
+</html>

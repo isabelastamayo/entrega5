@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  
+  <style>
+      #micuadro{
+        background-image: url(pm.jpeg);
+      position: absolute;
+      width: 45%;
+      height: 50%;
+      top: 15%;
+      left: 28%;
+      z-index: 3;
+      font-size: 40px;
+    text-align: center;
+    color: white;
+    line-height:300px;
+    font-style: oblique;
+    }
+
+}
+
+  </style>
+
+    <script>
+    	function position(event)
+      {
+          var x = event.clientX;
+          var y = event.clientY; 
+          var mousePositions = document.getElementById('mousePositions'); 
+          mousePositions.innerHTML = 'X: '+x+', Y: '+y;
+
+          if (x>382 && x<995 && y>102 && y<425) {
+          	micuadro.innerHTML = 'Estoy dentro del cuadro';
+          }
+          else
+          {
+          	micuadro.innerHTML = 'Estoy fuera del cuadro';
+          }
+           }   
+    </script>
+
+</head>
+<body  background="fmou.jpeg" style="background-repeat: no-repeat;background-size: cover;" onmousemove="position(event)"  onMousedown="cli(event)">
+	<div id="mousePositions"></div>
+	<div id="entero" class="total"></div>
+	<div id="micuadro" class="sip"></div>
+  
+
+
+</body>
+</html>
